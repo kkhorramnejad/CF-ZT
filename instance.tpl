@@ -62,7 +62,7 @@ logfile: /var/log/cloudflared.log
 #cloudflared to the origin trace
 loglevel: trace
 #cloudflared to cloudflare network trace
-transport-loglevel: trace
+transport-loglevel: debug
 EOF
 # Now we install the tunnel as a systemd service 
 sudo cloudflared service install
