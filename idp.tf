@@ -1,10 +1,10 @@
 # oauth
 resource "cloudflare_access_identity_provider" "github_oauth" {
-  account_id = "4292ffd8f8bea47f9a717918df90162b"
+  account_id = var.cloudflare_account_id
   name       = "GitHub OAuth"
   type       = "github"
   config {
-    client_id     = "bebb319c22b975b8c750"
-    client_secret = "b431c08ffba942a1804da2476b496e9c1915c69f"
+    client_id     = var.github_client_id
+    client_secret = var.github_client_secret
   }
 }

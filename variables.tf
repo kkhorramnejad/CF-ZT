@@ -72,3 +72,14 @@ variable "cloudflare_token" {
   description = "The Cloudflare user's API token."
   type        = string
 }
+
+# Identity Prodiver Variables
+variable "github_client_id" {
+  description = "CF requiers client ID to set up athentication"
+  type = string
+}
+
+variable "github_client_secret" {
+  description = "CF requiers client secret to set up athentication"
+  type = string
+}
