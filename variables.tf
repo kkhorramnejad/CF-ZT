@@ -95,15 +95,3 @@ variable "github_client_secret" {
   sensitive   = true
 
 }
-
-# Terraform Cloud Variables
-variable "tfc_org" {
-  description = "name of your organization in terraform cloud"
-  type        = string
-  sensitive   = true
-}
-
-variable "tfc_workspaces_tags" {
-  description = "tags used for workspaces in terraform cloud"
-  type        = list(string)
-}

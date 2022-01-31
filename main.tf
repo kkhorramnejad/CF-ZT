@@ -1,8 +1,8 @@
 terraform {
   cloud {
-    organization = var.tfc_org
+    organization = "kkhorramnejad"
     workspaces {
-      tags = ["var.tfc_workspaces_tags[0]"]
+      tags = ["cloudflare-sase", "cf-zt"]
     }
   }
 }
