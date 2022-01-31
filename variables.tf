@@ -69,7 +69,7 @@ variable "cloudflare_email" {
 }
 
 variable "email_list" {
-  description = "list of specific emails where you will be refferencing in rules"
+  description = "list of specific emails where you will be referencing in rules"
   type        = list(string)
   sensitive   = true
 }
