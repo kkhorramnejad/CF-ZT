@@ -71,15 +71,21 @@ variable "cloudflare_email" {
 variable "cloudflare_token" {
   description = "The Cloudflare user's API token."
   type        = string
+  sensitive   = true
+
 }
 
 # Identity Prodiver Variables
 variable "github_client_id" {
   description = "CF requiers client ID to set up athentication"
   type = string
+  sensitive   = true
+
 }
 
 variable "github_client_secret" {
   description = "CF requiers client secret to set up athentication"
   type = string
+  sensitive   = true
+
 }
