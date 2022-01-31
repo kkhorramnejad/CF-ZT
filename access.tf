@@ -4,7 +4,7 @@ resource "cloudflare_access_group" "tf_access_group" {
   name       = "tf_access_group"
 
   include {
-    email = [var.cloudflare_email, "kaveh@cloudflare.com", "kkhorramnejad@ryerson.ca"]
+    email = [var.cloudflare_email, var.email_list[0], var.email_list[1]]
   }
   # require {
   #   device_posture = ["Gateway"]

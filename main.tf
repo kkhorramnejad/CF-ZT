@@ -1,8 +1,8 @@
 terraform {
   cloud {
-    organization = "kkhorramnejad"
+    organization = var.tfc_org
     workspaces {
-      tags = ["CF-ZT"]
+      tags = ["var.tfc_workspaces[0]"]
     }
   }
 }
@@ -50,8 +50,8 @@ resource "google_compute_instance" "origin" {
       secret      = random_id.tunnel_secret.b64_std
       ssh_ca_cert = cloudflare_access_ca_certificate.ssh_short_lived.public_key
       username    = var.unix_username
-      password    = var.unix_password  
-      })
+      password    = var.unix_password
+  })
 }
 
 # DNS settings to CNAME to tunnel target for HTTP application

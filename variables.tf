@@ -68,6 +68,12 @@ variable "cloudflare_email" {
   sensitive   = true
 }
 
+variable "email_list" {
+  description = "list of specific emails where you will be refferencing in rules"
+  type        = list(string)
+  sensitive   = true
+}
+
 variable "cloudflare_token" {
   description = "The Cloudflare user's API token."
   type        = string
@@ -78,14 +84,27 @@ variable "cloudflare_token" {
 # Identity Prodiver Variables
 variable "github_client_id" {
   description = "CF requiers client ID to set up athentication"
-  type = string
+  type        = string
   sensitive   = true
 
 }
 
 variable "github_client_secret" {
   description = "CF requiers client secret to set up athentication"
-  type = string
+  type        = string
   sensitive   = true
 
+}
+
+# Terraform Cloud Variables
+variable "tfc_org" {
+  description = "name of your organization in terraform cloud"
+  type        = string
+  sensitive   = true
+}
+
+variable "tfc_workspaces" {
+  description = "name of your workspaces in terraform cloud"
+  type        = list(string)
+  sensitive   = true
 }
