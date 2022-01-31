@@ -103,8 +103,7 @@ variable "tfc_org" {
   sensitive   = true
 }
 
-variable "tfc_workspaces" {
-  description = "name of your workspaces in terraform cloud"
+variable "tfc_workspaces_tags" {
+  description = "tags used for workspaces in terraform cloud"
   type        = list(string)
-  sensitive   = true
 }

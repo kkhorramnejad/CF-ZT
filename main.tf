@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = var.tfc_org
     workspaces {
-      tags = ["var.tfc_workspaces[0]"]
+      tags = ["var.tfc_workspaces_tags[0]"]
     }
   }
 }
